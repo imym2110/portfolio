@@ -20,7 +20,7 @@ export default function LatestProject() {
   const renderProject = (project) => {
     return (
       <WrapItem flexDirection="column">
-        <ImageSlider imageList={project.images.map((img) => img.downloadURL)}/>
+        <ImageSlider imageList={project.images.map((img) => img.downloadURL)} />
         <Heading size="md" color="secondary" mt={3}>
           <Box
             display={"inline-block"}

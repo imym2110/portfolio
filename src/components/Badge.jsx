@@ -8,10 +8,9 @@ export function Badge({ bg, children }) {
         bg={bg}
         color="white"
         borderRadius={3}
-        p={3}
-        width={130}
+        p={2}
+        width={110}
         textAlign="center"
-        
       >
         {children}
       </Heading>
