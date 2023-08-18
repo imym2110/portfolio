@@ -7,7 +7,7 @@ import { Footer } from "./features/Footer";
 export function App() {
   return (
     <>
-      <Box p={10}>
+      <Box p={5}>
         <Header />
         <Landing />
         <LatestProject />
