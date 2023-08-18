@@ -24,6 +24,7 @@ export function ImageSlider({ imageList }) {
     return imageList.map((imageLink, i) => {
       return (
         <Image
+          h={200}
           src={imageLink}
           boxShadow="xl"
           borderRadius="xl"
