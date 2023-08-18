@@ -11,7 +11,9 @@ export default function LatestProject() {
 
   async function fetchAll() {
     const projectResp = await ProjectsAPI.fetchAll();
-    setProjects(projectResp);
+    const proj = projectResp.filter((item) => item.title !== "project");
+    console.log("---->", proj);
+    setProjects(proj);
   }
   useEffect(() => {
     fetchAll();

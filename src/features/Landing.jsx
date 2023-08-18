@@ -11,17 +11,32 @@ import {
 import humanImg from "@/assets/images/human.png";
 import { useTranslation } from "react-i18next";
 import { Badge as SkillBadge } from "@/components/Badge";
-
-const SKILLS = [
-  { label: "React" },
-  { label: "Redux" },
-  { label: "Typescript" },
-  { label: "Javascript" },
-  { label: "Angular" },
-];
+import { useEffect, useState } from "react";
+import { ProjectsAPI } from "../api/projects";
 
 export function Landing() {
   const { t } = useTranslation("home");
+
+  const [skill, setSkill] = useState([]);
+
+  async function fetchAll() {
+    const projectResp = await ProjectsAPI.fetchAll();
+    const proj = projectResp.filter((item) => item.title == "project");
+    setSkill(proj[0].technologies);
+  }
+  useEffect(() => {
+    fetchAll();
+  }, []);
+
+  const techSkill = (
+    <Wrap mt={14} maxW={550}>
+      {skill.map((skill) => (
+        <WrapItem key={skill}>
+          <SkillBadge bg={skill}>{skill}</SkillBadge>
+        </WrapItem>
+      ))}
+    </Wrap>
+  );
   const leftSection = (
     <Box>
       <Heading
@@ -41,13 +56,7 @@ export function Landing() {
         </Text>
         <br /> {t("location")}
       </Text>
-      <Wrap mt={14}>
-        {SKILLS.map((skill) => (
-          <WrapItem key={skill}>
-            <SkillBadge bg={skill.label}>{skill.label}</SkillBadge>
-          </WrapItem>
-        ))}
-      </Wrap>
+      {techSkill}
     </Box>
   );
   const badgeExperience = (
