@@ -10,9 +10,7 @@ export function App() {
       <Box p={10}>
         <Header />
         <Landing />
-        <Box ml={10}>
-          <LatestProject />
-        </Box>
+        <LatestProject />
       </Box>
       <Footer />
     </>
