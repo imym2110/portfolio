@@ -47,7 +47,9 @@ export default function LatestProject() {
     <Flex direction={"column"} w="100%">
       <Heading>{t("latestProjects")}</Heading>
       <Wrap mt={10} spacing={16}>
-        {projects?.map(renderProject)}
+        <WrapItem justifyContent="space-evenly" flexWrap="wrap" gap={10}>
+          {projects?.map(renderProject)}
+        </WrapItem>
       </Wrap>
     </Flex>
   );
