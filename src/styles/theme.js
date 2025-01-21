@@ -8,20 +8,21 @@ const colors = {
   secondary: "#0F1B61",
   black: "#000000",
 
-  React: "#FF7308",
-  Redux: "black",
-  Typescript: "#0F1B61",
-  Angular: "#000000bc",
-  ES6: "#fea154",
-  HTML: "#E72F09",
-  CSS: "#3878F4",
-  Bootstrap: "#9038f4",
-  Firebase: "#feba54",
-  Vercel: "grey",
-  "Chakra UI": "#31b03e",
-  "Material UI": "blue",
-  Javascript: "green",
-  Strapi: "purple",
+  React: "#61DAFB", // Official React color
+  Redux: "#764ABC", // Official Redux purple
+  Typescript: "#3178C6", // Official TypeScript blue
+  Angular: "#DD0031", // Official Angular red
+  ES6: "#F7DF1E", // JavaScript ES6 yellow (like the JS logo)
+  HTML: "#E34F26", // Official HTML5 orange
+  CSS: "#1572B6", // Official CSS3 blue
+  Bootstrap: "#7952B3", // Official Bootstrap purple
+  Firebase: "#FFCA28", // Official Firebase yellow
+  Vercel: "#000000", // Official Vercel black
+  "Chakra UI": "#319795", // Chakra UI teal
+  "Material UI": "#007FFF", // Material UI blue
+  Javascript: "#F7DF1E", // Official JavaScript yellow
+  Strapi: "#2F2E8B", // Strapi official purple
+  NodeJS: "#68A063", // Node.js official green
 };
 
 const fonts = {
