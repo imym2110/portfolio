@@ -23,6 +23,8 @@ const colors = {
   Javascript: "#F7DF1E", // Official JavaScript yellow
   Strapi: "#2F2E8B", // Strapi official purple
   NodeJS: "#68A063", // Node.js official green
+  SQL: "#CC2927", // SQL Server red (inspired by Microsoft SQL Server logo)
+  MongoDB: "#47A248" // Official MongoDB green
 };
 
 const fonts = {
