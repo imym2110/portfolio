@@ -22,7 +22,9 @@ export function Landing() {
   async function fetchAll() {
     const projectResp = await ProjectsAPI.fetchAll();
     const proj = projectResp.filter((item) => item.title == "project");
-    setSkill(proj[0].technologies);
+    const hardCodedSkills = ["NodeJS", "SQL", "MongoDB"];
+    const allSkills = [...hardCodedSkills, ...proj[0].technologies];
+    setSkill(allSkills);
   }
   useEffect(() => {
     fetchAll();
